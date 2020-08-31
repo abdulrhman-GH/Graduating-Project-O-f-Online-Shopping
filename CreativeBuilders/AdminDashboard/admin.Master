@@ -1,0 +1,286 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="CreativeBuilders.AdminDashboard.admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <link href="dist/images/myLogo.png" rel="shortcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="EhabIbrahim">
+    <title>Dashboard - Creative Builders </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <!-- BEGIN: CSS Assets-->
+    <link rel="stylesheet" href="dist/css/app.css" />
+    <!-- END: CSS Assets-->
+     
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="app loading">
+    <!-- BEGIN: Mobile Menu -->
+    <div class="mobile-menu md:hidden">
+        <div class="mobile-menu-bar">
+            <a href="#" class="flex mr-auto">
+                <img alt="Logo" class="w-6" src="dist/images/myLogo.png">
+            </a>
+            <a href="javascript:;" id="mobile-menu-toggler"><i data-feather="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i></a>
+        </div>
+        <ul class="border-t border-theme-24 py-5 hidden">
+            <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon"><i data-feather="box"></i></div>
+                    <div class="menu__title">Categories<i data-feather="chevron-down" class="menu__sub-icon"></i></div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="Categories.aspx" class="menu">
+                            <div class="menu__icon"><i data-feather="activity"></i></div>
+                            <div class="menu__title">Category List</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="AddCategory.aspx" class="menu">
+                            <div class="menu__icon"><i data-feather="activity"></i></div>
+                            <div class="menu__title">Add New</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon"><i data-feather="edit"></i></div>
+                    <div class="menu__title">Products <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="Products.aspx" class="menu">
+                            <div class="menu__icon"><i data-feather="activity"></i></div>
+                            <div class="menu__title">Product List </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="AddProduct.aspx" class="menu">
+                            <div class="menu__icon"><i data-feather="activity"></i></div>
+                            <div class="menu__title">Add New </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon"><i data-feather="users"></i></div>
+                    <div class="menu__title">Suppliers <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="Suppliers.aspx" class="menu">
+                            <div class="menu__icon"><i data-feather="activity"></i></div>
+                            <div class="menu__title">Supplier List </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="AddSupplier.aspx" class="menu">
+                            <div class="menu__icon"><i data-feather="activity"></i></div>
+                            <div class="menu__title">Add New </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;" class="menu">
+                    <div class="menu__icon"><i data-feather="trello"></i></div>
+                    <div class="menu__title">Orders <i data-feather="chevron-down" class="menu__sub-icon"></i></div>
+                </a>
+                <ul class="">
+                    <li>
+                        <a href="Orders.aspx" class="menu">
+                            <div class="menu__icon"><i data-feather="activity"></i></div>
+                            <div class="menu__title">Order List</div>
+                        </a>
+                    </li>
+                    
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- END: Mobile Menu -->
+    <div class="flex">
+        <!-- BEGIN: Side Menu -->
+        <nav class="side-nav">
+            <a href="Dashboard.aspx" class="intro-x flex items-center pl-5 pt-4">
+                <img alt="Midone Tailwind HTML Admin Template" class="w-6" src="dist/images/myLogo.png">
+                <span class="hidden xl:block text-white text-lg ml-3">Creative Builders</span>
+            </a>
+            <div class="side-nav__devider my-6"></div>
+            <ul>
+                <li>
+                    <a href="Dashboard.aspx" class="side-menu side-menu--active">
+                        <div class="side-menu__icon"><i data-feather="home"></i></div>
+                        <div class="side-menu__title">Dashboard </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"><i data-feather="box"></i></div>
+                        <div class="side-menu__title">Categories <i data-feather="chevron-down" class="side-menu__sub-icon"></i></div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="Categories.aspx" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="activity"></i></div>
+                                <div class="side-menu__title">Category List</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AddCategory.aspx" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="activity"></i></div>
+                                <div class="side-menu__title">Add New</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"><i data-feather="edit"></i></div>
+                        <div class="side-menu__title">Products <i data-feather="chevron-down" class="side-menu__sub-icon"></i></div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="Products.aspx" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="activity"></i></div>
+                                <div class="side-menu__title">Product List </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AddProduct.aspx" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="activity"></i></div>
+                                <div class="side-menu__title">Add New </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"><i data-feather="users"></i></div>
+                        <div class="side-menu__title">Suppliers <i data-feather="chevron-down" class="side-menu__sub-icon"></i></div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="Suppliers.aspx" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="activity"></i></div>
+                                <div class="side-menu__title">Supplier List </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="AddSupplier.aspx" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="activity"></i></div>
+                                <div class="side-menu__title">Add New</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu">
+                        <div class="side-menu__icon"><i data-feather="trello"></i></div>
+                        <div class="side-menu__title">Orders <i data-feather="chevron-down" class="side-menu__sub-icon"></i></div>
+                    </a>
+                    <ul class="">
+                        <li>
+                            <a href="Orders.aspx" class="side-menu">
+                                <div class="side-menu__icon"><i data-feather="activity"></i></div>
+                                <div class="side-menu__title">Order List </div>
+                            </a>
+                        </li>
+                        
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- END: Side Menu -->
+        <!-- BEGIN: Content -->
+        <div class="content">
+            <!-- BEGIN: Top Bar -->
+            <div class="top-bar">
+                <!-- BEGIN: Breadcrumb -->
+                <div class="-intro-x breadcrumb mr-auto hidden sm:flex"><a href="#" class=""></a> <a href="#" class="breadcrumb--active"></a> </div>
+                <!-- END: Breadcrumb -->
+                <!-- BEGIN: Search -->
+                <div class="intro-x relative mr-3 sm:mr-6">
+                    <div class="search hidden sm:block">
+                        <input type="text" class="search__input input placeholder-theme-13" placeholder="Search...">
+                        <i data-feather="search" class="search__icon"></i>
+                    </div>
+                    <a class="notification sm:hidden" href="#"><i data-feather="search" class="notification__icon"></i></a>
+                   
+                </div>
+                <!-- END: Search -->
+                <!-- BEGIN: Notifications -->
+                <div class="intro-x dropdown relative mr-auto sm:mr-6">
+                    <div class="dropdown-toggle notification notification--bullet cursor-pointer"><i data-feather="bell" class="notification__icon"></i></div>
+                    <div class="notification-content dropdown-box mt-8 absolute top-0 left-0 sm:left-auto sm:right-0 z-20 -ml-10 sm:ml-0">
+                        <div class="notification-content__box dropdown-box__content box">
+                            <div class="notification-content__title">Notifications</div>
+                            <div class="cursor-pointer relative flex items-center ">
+                                <div class="w-12 h-12 flex-none image-fit mr-1">
+                                    <img alt="Midone Tailwind HTML Admin Template" class="rounded-full" src="dist/images/profile-12.jpg">
+                                    <div class="w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"></div>
+                                </div>
+                                <div class="ml-2 overflow-hidden">
+                                    <div class="flex items-center">
+                                        <a href="javascript:;" class="font-medium truncate mr-5">Al Pacino</a>
+                                        <div class="text-xs text-gray-500 ml-auto whitespace-no-wrap">05:09 AM</div>
+                                    </div>
+                                    <div class="w-full truncate text-gray-600">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500</div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Notifications -->
+                <!-- BEGIN: Account Menu -->
+                <div class="intro-x dropdown w-8 h-8 relative">
+                    <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
+                        <img runat="server" id="UserAvatar" src="#" />
+                    </div>
+                    <div class="dropdown-box mt-10 absolute w-56 top-0 right-0 z-20">
+                        <div class="dropdown-box__content box bg-theme-38 text-white">
+                            <div class="p-4 border-b border-theme-40">
+                                <div runat="server" id="UserName" class="font-medium"></div>
+                                <div class="text-xs text-theme-41">Admin</div>
+                            </div>
+                            <div class="p-2">
+                                <a href="UpdateProfile.aspx" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"><i data-feather="user" class="w-4 h-4 mr-2"></i>Profile </a>
+                                <a href="ResetPassword.aspx" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"><i data-feather="lock" class="w-4 h-4 mr-2"></i>Reset Password </a>
+                            </div>
+                            <div class="p-2 border-t border-theme-40">
+                                <a href="Login.aspx?logout=true" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"><i data-feather="toggle-right" class="w-4 h-4 mr-2"></i>Logout </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END: Account Menu -->
+            </div>
+            <!-- END: Top Bar -->
+           <%-- <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-12 xxl:col-span-9 grid grid-cols-12 gap-6">--%>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderMainContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <%--</div>
+            </div>--%>
+        </div>
+        <!-- END: Content -->
+    </div>
+    <!-- BEGIN: JS Assets-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBG7gNHAhDzgYmq4-EHvM4bqW1DNj2UCuk&amp;libraries=places"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" type="text/javascript"></script>
+    <script src="dist/js/app.js"></script>
+
+    <!-- END: JS Assets-->
+</body>
+
+</html>

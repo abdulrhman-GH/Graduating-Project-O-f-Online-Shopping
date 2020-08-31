@@ -1,0 +1,379 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A804AFD-F2C4-47B2-9100-66895608FD1D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CreativeBuilders</RootNamespace>
+    <AssemblyName>CreativeBuilders</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44393</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminDashboard\AddCategory.aspx" />
+    <Content Include="AdminDashboard\AddProduct.aspx" />
+    <Content Include="AdminDashboard\AddSupplier.aspx" />
+    <Content Include="AdminDashboard\Categories.aspx" />
+    <Content Include="AdminDashboard\CategoryDetails.aspx" />
+    <Content Include="AdminDashboard\Dashboard.aspx" />
+    <Content Include="AdminDashboard\dist\css\ajax-loader.gif" />
+    <Content Include="AdminDashboard\dist\css\app.css" />
+    <Content Include="AdminDashboard\dist\css\fonts\slick-2.html" />
+    <Content Include="AdminDashboard\dist\css\fonts\slick-3.html" />
+    <Content Include="AdminDashboard\dist\css\fonts\slick-4.html" />
+    <Content Include="AdminDashboard\dist\css\fonts\slick.html" />
+    <Content Include="AdminDashboard\dist\css\fonts\slickd41d.html" />
+    <Content Include="AdminDashboard\dist\fonts\summernote\summernote.html" />
+    <Content Include="AdminDashboard\dist\images\bg-login-page.svg" />
+    <Content Include="AdminDashboard\dist\images\error-illustration.svg" />
+    <Content Include="AdminDashboard\dist\images\illustration.svg" />
+    <Content Include="AdminDashboard\dist\images\logo.svg" />
+    <Content Include="AdminDashboard\dist\images\my Logo.png" />
+    <Content Include="AdminDashboard\dist\images\products\download.png" />
+    <Content Include="AdminDashboard\dist\images\products\elmoustafa.png" />
+    <Content Include="AdminDashboard\dist\images\products\logo-dark.png" />
+    <Content Include="AdminDashboard\dist\js\app.js" />
+    <Content Include="AdminDashboard\Login.aspx" />
+    <Content Include="AdminDashboard\Orders.aspx" />
+    <Content Include="AdminDashboard\ProductDetails.aspx" />
+    <Content Include="AdminDashboard\Products.aspx" />
+    <Content Include="AdminDashboard\ResetPassword.aspx" />
+    <Content Include="AdminDashboard\Suppliers.aspx" />
+    <Content Include="AdminDashboard\UpdateProfile.aspx" />
+    <Content Include="FrontEnd\AboutUs.aspx" />
+    <Content Include="FrontEnd\assets\css\plugins\plugins.min.css" />
+    <Content Include="FrontEnd\assets\css\style.min.css" />
+    <Content Include="FrontEnd\assets\css\vendor\vendor.min.css" />
+    <Content Include="FrontEnd\assets\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="FrontEnd\assets\js\main.js" />
+    <Content Include="FrontEnd\assets\js\plugins\plugins.min.js" />
+    <Content Include="FrontEnd\assets\js\vendor\vendor.min.js" />
+    <Content Include="FrontEnd\Checkout.aspx" />
+    <Content Include="FrontEnd\ContactUs.aspx" />
+    <Content Include="FrontEnd\assets\images\about\about-1.jpg" />
+    <Content Include="FrontEnd\assets\images\about\about-2.jpg" />
+    <Content Include="FrontEnd\assets\images\about\about-3.jpg" />
+    <Content Include="FrontEnd\assets\images\cart\cart.png" />
+    <Content Include="FrontEnd\assets\images\logo\Logo.png" />
+    <Content Include="FrontEnd\assets\images\payment\footerend.png" />
+    <Content Include="FrontEnd\assets\images\slider\slider1.png" />
+    <Content Include="FrontEnd\assets\images\slider\slider2.png" />
+    <Content Include="FrontEnd\Index.aspx" />
+    <Content Include="FrontEnd\Login.aspx" />
+    <Content Include="FrontEnd\Product-Details.aspx" />
+    <Content Include="FrontEnd\Products.aspx" />
+    <Content Include="FrontEnd\Register.aspx" />
+    <Content Include="FrontEnd\ResetCustomerPassword.aspx" />
+    <Content Include="FrontEnd\shopping-cart.aspx" />
+    <Content Include="FrontEnd\UpdateAcountData.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminDashboard\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\AddSupplier.aspx.cs">
+      <DependentUpon>AddSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\AddSupplier.aspx.designer.cs">
+      <DependentUpon>AddSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\Categories.aspx.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\Categories.aspx.designer.cs">
+      <DependentUpon>Categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\CategoryDetails.aspx.cs">
+      <DependentUpon>CategoryDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\CategoryDetails.aspx.designer.cs">
+      <DependentUpon>CategoryDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\ProductDetails.aspx.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\ProductDetails.aspx.designer.cs">
+      <DependentUpon>ProductDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\Suppliers.aspx.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\Suppliers.aspx.designer.cs">
+      <DependentUpon>Suppliers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDashboard\UpdateProfile.aspx.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard\UpdateProfile.aspx.designer.cs">
+      <DependentUpon>UpdateProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\BusinessLayer.cs" />
+    <Compile Include="App_Code\DataAccessLayer.cs" />
+    <Compile Include="FrontEnd\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\FrontEnd.Master.cs">
+      <DependentUpon>FrontEnd.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\FrontEnd.Master.designer.cs">
+      <DependentUpon>FrontEnd.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Product-Details.aspx.cs">
+      <DependentUpon>Product-Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Product-Details.aspx.designer.cs">
+      <DependentUpon>Product-Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\ResetCustomerPassword.aspx.cs">
+      <DependentUpon>ResetCustomerPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\ResetCustomerPassword.aspx.designer.cs">
+      <DependentUpon>ResetCustomerPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\shopping-cart.aspx.cs">
+      <DependentUpon>shopping-cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\shopping-cart.aspx.designer.cs">
+      <DependentUpon>shopping-cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\UpdateAcountData.aspx.cs">
+      <DependentUpon>UpdateAcountData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrontEnd\UpdateAcountData.aspx.designer.cs">
+      <DependentUpon>UpdateAcountData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminDashboard\admin.Master" />
+    <Content Include="FrontEnd\assets\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="FrontEnd\assets\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="FrontEnd\assets\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="FrontEnd\assets\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="FrontEnd\assets\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="FrontEnd\assets\fonts\Material-Design-Iconic-Fontd1f1.ttf" />
+    <Content Include="FrontEnd\assets\fonts\Material-Design-Iconic-Fontd1f1.woff" />
+    <Content Include="FrontEnd\assets\fonts\Material-Design-Iconic-Fontd1f1.woff2" />
+    <Content Include="FrontEnd\FrontEnd.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminDashboard\dist\images\users\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65470</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44393/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
